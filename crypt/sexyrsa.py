@@ -25,8 +25,7 @@ priKey_der = base64.b64decode( 'privateKey' )
 priKey = RSA.importKey( priKey_der )
 msg_long = priKey.decrypt( c )
 msg_hex = hex( msg_long )
-import binascii
-print msg_str = binascii.unhexlify( msg_hex[ 2 : -1 ] )
+print msg_hex[ 2 : -1 ].decode("hex")
 
 
 
