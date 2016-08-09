@@ -19,10 +19,9 @@ outkey.write(key.exportKey())
 outkey.close()
 
 # use "$ python ~/Desktop/code/python/lib/featherduster/featherduster.py sexyrsa.pub" get PrivateKey
-# use base64 decode privateKey
-import base64
-priKey_der = base64.b64decode( 'privateKey' )
-priKey = RSA.importKey( priKey_der )
+f = open( 'sexyrsa.private', 'r' )
+key = f.read()
+priKey = RSA.importKey( key )
 msg_long = priKey.decrypt( c )
 msg_hex = hex( msg_long )
 print msg_hex[ 2 : -1 ].decode("hex")
