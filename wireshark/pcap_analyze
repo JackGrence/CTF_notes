@@ -1,0 +1,27 @@
+use wireshark analyze tmctf100.pcap will found:
+Telnet
+    Data: src 1.1.1.11 dst 1.1.1.10
+    Data: proto esp spi 0xfab21777 reqid 16389 mode tunnel
+    Data: replay-window 32 flag 20
+    Data: auth hmac(sha1) 0x11cf27c5b3357a5fd5d26d253fffd5339a99b4d1
+    Data: enc cbc(aes) 0xfa19ff5565b1666d3dd16fcfda62820da44b2b51672a85fed155521bedb243ee
+    Data: src 1.1.1.10 dst 1.1.1.11
+    Data: proto esp spi 0xbfd6dc1c reqid 16389 mode tunnel
+    Data: replay-window 32 flag 20
+    Data: auth hmac(sha1) 0x829b457814bd8856e51cce1d745619507ca1b257
+    Data: enc cbc(aes) 0x2a340c090abec9186c841017714a233fba6144b3cb20c898db4a30f02b0a003d
+    Data: src 1.1.1.10 dst 1.1.1.11
+    Data: proto esp spi 0xeea1503c reqid 16389 mode tunnel
+    Data: replay-window 32 flag 20
+    Data: auth hmac(sha1) 0x951d2d93498d2e7479c28c1bcc203ace34d7fcde
+    Data: enc cbc(aes) 0x6ec6072dd25a6bcb7b9b3b516529acb641a1b356999f791eb971e57cc934a5eb
+    Data: src 1.1.1.11 dst 1.1.1.10
+    Data: proto esp spi 0xd4d2074d reqid 16389 mode tunnel
+    Data: replay-window 32 flag 20
+    Data: auth hmac(sha1) 0x100a0b23fc006c867455506843cc96ad26026ec0
+    Data: enc cbc(aes) 0xdcfbc7d33d3c606de488c6efac4624ed50b550c88be0d62befb049992972cca6
+    Data: \033]0;reds@localhost:~\a[reds@localhost ~]$ 
+[ in wireshark ]
+edit > preferences > protocols > ESP > ESA SAs[edit]
+add the key from above, will find HTTP request, the image is flag
+file > export objects > HTTP

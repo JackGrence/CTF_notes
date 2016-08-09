@@ -1,0 +1,14 @@
+writeup:http://itemize.no/2016/07/31/TMCTF-2016/
+need knowledge - EXIF-data
+Tag										Value
+Manufacturer							CASIO
+Model									QV-4000
+Orientation (rotation)					top - left [8 possible values[21]]
+Software								Ver1.01
+Date and Time							2003:08:11 16:45:32
+YCbCr Positioning						centered
+Compression								JPEG compression
+x-Resolution							72.00
+...
+...
+
