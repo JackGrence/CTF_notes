@@ -1,0 +1,1 @@
+while read line; do date -d "December 9, 2005 next year" +%a | grep Fri; done < date.txt | wc

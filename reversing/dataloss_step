@@ -1,0 +1,3 @@
+$ ndisasm -b 32 dataloss
+278 < 468 < mov eax,0x413d14
+
